@@ -1,11 +1,8 @@
 <template>
-  <h1>HOME</h1>
+  <h2>detalle</h2>
 </template>
 
 <script setup>
-import { getUsers } from '@/service';
-
-getUsers()
 </script>
 
 <style>
