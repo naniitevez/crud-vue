@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="card-footer">
-      <router-link :to="'/detail/' + props.id">
+      <router-link :to="'/user/detail/' + props.id">
         <button class="btn btn-info">Detalle</button>
       </router-link>
     </div>

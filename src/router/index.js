@@ -8,10 +8,16 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/detail/:id",
-    name: "detail",
+    path: "/user/detail/:id",
+    name: "userDetail",
     component: () =>
-      import(/* webpackChunkName: "detail" */ "../views/DetailView.vue"),
+      import(/* webpackChunkName: "detail" */ "../views/UserDetailView.vue"),
+  },
+  {
+    path: "/user/new",
+    name: "newUser",
+    component: () =>
+      import(/* webpackChunkName: "newUser" */ "../views/NewUserView.vue"),
   },
 ];
 
