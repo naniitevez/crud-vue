@@ -5,6 +5,12 @@
 <script setup>
 import { useRoute } from "vue-router";
 import { computed } from "vue";
+import { useStore } from "vuex";
+
+const store = useStore();
+const user = computed(() => {
+  store.state.users
+});
 
 const route = useRoute();
 const userId = computed(() => route.params.id);
