@@ -4,6 +4,7 @@
       <CardComponent
         v-for="user in users"
         :key="user.id"
+        :id="user.id"
         :name="user.name"
         :email="user.email"
         :phone="user.phone"
