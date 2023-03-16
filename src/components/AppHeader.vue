@@ -1,7 +1,6 @@
 <template>
   <nav>
     <router-link to="/">Inicio</router-link>
-    <router-link to="/detail">Detalle</router-link>
   </nav>
 </template>
 
