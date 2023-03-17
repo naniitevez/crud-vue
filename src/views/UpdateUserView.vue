@@ -106,7 +106,7 @@ const user = computed(() => {
 });
 
 const handleSubmit = () => {
-  console.log("user", user.value);
+  store.dispatch('saveUpdatedUser', user.value)
 };
 </script>
 

@@ -19,10 +19,19 @@ const store = createStore({
         console.log(error);
       }
     },
+    saveUpdatedUser({ commit }, user) {
+      commit("updateUser", user);
+    },
   },
   mutations: {
-    setUsers(state, payload) {
-      state.users = payload;
+    setUsers(state, users) {
+      state.users = users;
+    },
+    updateUser(state, updatedUser) {
+      const index = state.users.findIndex((user) => user.id === updatedUser.id);
+      if (index !== -1) {
+        state.users[index] = updatedUser;
+      }
     },
   },
 });
