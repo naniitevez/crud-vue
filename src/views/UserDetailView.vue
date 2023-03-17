@@ -16,7 +16,11 @@
         </p>
         <p><span>CP. </span>{{ user.address.zipcode }}</p>
       </div>
-      <hr />
+      <div class="buttons-container">
+        <router-link :to="{ name: 'updateUser', params: { id: user.id } }">
+          <button class="btn btn-info">Editar</button>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -64,6 +68,10 @@ const user = computed(() => {
         font-size: 18px;
         font-weight: 600;
       }
+    }
+
+    .buttons-container {
+      margin-top: 3rem;
     }
   }
 }
