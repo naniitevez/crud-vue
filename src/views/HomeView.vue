@@ -23,7 +23,9 @@ const store = useStore();
 const users = computed(() => store.state.users);
 
 onMounted(() => {
-  store.dispatch("fetchUsers");
+  if (store.state.users.length === 0) {
+    store.dispatch("fetchUsers");
+  }
 });
 </script>
 
