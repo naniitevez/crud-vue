@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div v-if="users.length !== 0" class="row">
       <CardComponent
         v-for="user in users"
         :key="user.id"
@@ -10,6 +10,7 @@
         :phone="user.phone"
       />
     </div>
+    <h2 v-else>No hay usuarios</h2>
   </div>
 </template>
 
