@@ -90,9 +90,11 @@
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { computed } from "vue";
 import { useStore } from "vuex";
+
+const router = useRouter();
 
 const route = useRoute();
 const userId = computed(() => route.params.id);
@@ -106,7 +108,8 @@ const user = computed(() => {
 });
 
 const handleSubmit = () => {
-  store.dispatch('saveUpdatedUser', user.value)
+  store.dispatch("saveUpdatedUser", user.value);
+  router.push(`/user/detail/${user.value.id}`);
 };
 </script>
 

@@ -91,9 +91,11 @@
 
 <script setup>
 import { useStore } from "vuex";
+import { useRouter } from "vue-router";
 import { ref } from "vue";
 
 const store = useStore();
+const router = useRouter();
 
 const user = ref({
   id: store.state.users.length + 1,
@@ -108,9 +110,9 @@ const user = ref({
 });
 
 const handleSubmit = () => {
-  store.dispatch("saveNewUser", user.value)
-}
-
+  store.dispatch("saveNewUser", user.value);
+  router.push(`/user/detail/${user.value.id}`);
+};
 </script>
 
 <style lang="scss" scoped>
