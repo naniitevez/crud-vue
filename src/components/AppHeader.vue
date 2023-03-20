@@ -7,7 +7,7 @@
     </div>
     <div class="menu-container">
       <router-link to="/">Inicio</router-link>
-      <router-link to="/user/new">Nuevo usuario</router-link>
+      <router-link to="/user/create">Nuevo usuario</router-link>
     </div>
   </nav>
 </template>
@@ -29,7 +29,7 @@ const goBack = () => {
 <style lang="scss" scoped>
 nav {
   padding: 30px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   height: 80px;
   display: flex;
   justify-content: space-evenly;
@@ -51,9 +51,6 @@ nav {
         margin-right: 10px;
       }
     }
-  }
-
-  .menu-container {
   }
 }
 </style>

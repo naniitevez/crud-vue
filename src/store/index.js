@@ -22,6 +22,9 @@ const store = createStore({
     saveUpdatedUser({ commit }, user) {
       commit("updateUser", user);
     },
+    saveNewUser ({ commit }, user) {
+      commit("addUser", user);
+    },
   },
   mutations: {
     setUsers(state, users) {
@@ -33,6 +36,9 @@ const store = createStore({
         state.users[index] = updatedUser;
       }
     },
+    addUser(state, newUser) {
+      state.users.push(newUser)
+    }
   },
 });
 export default store;
